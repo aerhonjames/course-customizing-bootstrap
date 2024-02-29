@@ -1,2 +1,22 @@
-Here goes navbar
-{{> navbar/menu }}
+<nav class="navbar navbar-expand-lg navbar-light bg-white {{ classList }}">
+    <div class="container">
+      <a href="{{webRoot}}/index.html" class="navbar-brand d-flex align-items-center lh-1 me-10 transition-opacity opacity-75-hover">
+        <span class="f-w-7 d-block text-success me-2">
+            {{> logo/logo-icon }}
+        </span>
+        <span class="fw-bold text-body">
+            Sigma
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarSupportedContent">
+        {{> navbar/menu }}
+        <div class="d-none d-lg-flex">
+            <a href="#" class="btn btn-link text-muted" role="button">Login</a>
+            <a href="#" class="btn btn-primary ms-2">Get started</a>
+        </div>
+      </div>
+    </div>
+  </nav>

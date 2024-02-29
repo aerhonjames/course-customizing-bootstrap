@@ -5,6 +5,7 @@ import 'bootstrap';
 import './components/aos';
 import './components/swiper';
 import './components/typed';
+import './components/navbar';
 
 // Misc
 import './misc';

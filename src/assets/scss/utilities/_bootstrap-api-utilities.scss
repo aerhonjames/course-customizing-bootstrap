@@ -61,9 +61,19 @@ $utilities: map-merge(
           "50": 50
         )
     ),
+    "transition": (
+      property: transition,
+      values: (
+        "all": all ease-in .3s,
+        "color": color ease-in .3s,
+        "background": background-color ease-in .3s,
+        "opacity": opacity ease-in .3s
+      )
+    ),
     "opacity": map-merge(
       map-get($utilities, "opacity"), (
         responsive:true,
+        state: hover,
         values: map-merge(
           map-get(map-get($utilities, "opacity"), "values"), (
             5: .05,
@@ -78,6 +88,17 @@ $utilities: map-merge(
       (
         state: hover focus active
       )
-    ),  
+    ),
+    "border-white": (
+      property: border-color,
+      class: border-white,
+      values: (
+        10: rgba(255, 255, 255, .10),
+        25: rgba(255, 255, 255, .25),
+        50: rgba(255, 255, 255, .50),
+        75: rgba(255, 255, 255, .75),
+        90: rgba(255, 255, 255, .90)
+      )
+    ),
   )
 );
