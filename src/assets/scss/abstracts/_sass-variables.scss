@@ -166,3 +166,13 @@ $font-sizes: (
   9: 13px,
   xs: 11px
 );
+
+$form-label-font-size: 1rem;
+$form-label-font-weight: 500;
+$form-label-margin-bottom: .5rem;
+
+$input-padding-y: .65rem;
+$input-padding-x: .75rem;
+$input-color: $body-color;
+$input-border-color: $gray-400;
+$input-border-radius: 0;

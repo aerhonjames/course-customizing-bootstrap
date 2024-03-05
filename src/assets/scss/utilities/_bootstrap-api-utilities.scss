@@ -100,5 +100,16 @@ $utilities: map-merge(
         90: rgba(255, 255, 255, .90)
       )
     ),
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "font-weight"), "values"), (
+            black: 800,
+            medium: 500
+          )
+        )
+      )
+    ),
   )
 );
