@@ -124,5 +124,16 @@ $utilities: map-merge(
         n180: rotate(-180deg)
       )
     ),
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "rounded"), "values"), (
+            4: $border-radius-xl,
+            5: $border-radius-xxl
+          )
+        )
+      )
+    )
   )
 );
