@@ -6,6 +6,7 @@ import './components/aos';
 import './components/swiper';
 import './components/typed';
 import './components/navbar';
+import './components/tooltip';
 
 // Misc
 import './misc';

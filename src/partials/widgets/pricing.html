@@ -21,11 +21,18 @@
             </ul>
         </div>
         <!-- /Column header -->
-
         <!-- Column Rows -->
         {{#each pricing-one.entries}}
             <div class="{{#if additional-height}}f-h-24{{else}}f-h-20{{/if}} px-4 px-md-7 d-flex justify-content-start align-items-center border-bottom">
-                {{ text }}
+                <span
+                {{#if tooltip}}
+                class="tooltip-trigger"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="{{ tooltip }}"
+                {{/if}}>
+                    {{ text }}
+                </span>
             </div>
         {{/each}}
         <!-- /Column Rows -->
@@ -50,9 +57,20 @@
         <!-- Column Rows -->
         {{#each pricing-two.entries}}
             <div class="{{#if additional-height}}f-h-24{{else}}f-h-20{{/if}} px-4 px-md-7 d-flex justify-content-start align-items-center border-bottom">
-                <span>
+                {{#if cta}}
+                <a href="#" class="btn btn-primary w-100">{{ text }}</a>
+                {{else}}
+                <span
+                {{#if tooltip}}
+                class="tooltip-trigger"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="{{ tooltip }}"
+                {{/if}}>
                     {{ text }} <span class="d-lg-none d-inline">{{ suffix }}</span>
                 </span>
+                {{/if}}
+                
             </div>
         {{/each}}
         <!-- /Column Rows -->
@@ -77,9 +95,19 @@
         <!-- Column Rows -->
         {{#each pricing-three.entries}}
             <div class="{{#if additional-height}}f-h-24{{else}}f-h-20{{/if}} px-4 px-md-7 d-flex justify-content-start align-items-center border-bottom">
-                <span>
+                {{#if cta}}
+                <a href="#" class="btn btn-primary w-100">{{ text }}</a>
+                {{else}}
+                <span
+                {{#if tooltip}}
+                class="tooltip-trigger"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="{{ tooltip }}"
+                {{/if}}>
                     {{ text }} <span class="d-lg-none d-inline">{{ suffix }}</span>
                 </span>
+                {{/if}}
             </div>
         {{/each}}
         <!-- /Column Rows -->
