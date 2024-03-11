@@ -7,6 +7,7 @@ import './components/swiper';
 import './components/typed';
 import './components/navbar';
 import './components/tooltip';
+import './components/plyr';
 
 // Misc
 import './misc';
