@@ -113,6 +113,7 @@ $utilities: map-merge(
     ),
     "rotate": (
       property: transform,
+      class: rotate,
       values: (
         12: rotate(12deg),
         n12: rotate(-12deg),
