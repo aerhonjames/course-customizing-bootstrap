@@ -1,15 +1,55 @@
-<!-- {{# if (config reviews)}}
+<section class="marquee marquee-hover-pause">
+    <div class="marquee-body">
+        <div class="marquee-section animation-marquee-200 py-3">
+            {{# if (config reviews)}}
 
-    {{#each reviews.entries}}
-        <i class="ri-double-quotes-l"></i>
-        <p>{{ quote }}</p>
-        <picture>
-            <img src="{{ avatar }}" alt="{{ config.defaultImgAlt }}">
-        </picture>
-        <span>{{ name }}</span>
-        <picture>
-            <img src="{{ img }}" alt="{{ config.defaultImgAlt }}">
-        </picture>
-    {{/each}}
+                {{#each reviews.entries}}
+                    <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                        <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                        <p class="mb-2 fw-medium fs-6">{{ quote }}</p>
+                        <div class="d-flex align-items-center mt-2">
+                            <picture>
+                                <img class="f-w-10 rounded-circle" src="{{ avatar }}" alt="{{ config.defaultImgAlt }}">
+                            </picture>
+                            <span class="d-block text-muted fs-7 ms-3">{{ name }}</span>
+                        </div>
+                        <div class="mt-4 f-w-20">
+                            <picture>
+                                <img class="img-fluid d-table mx-auto" src="{{ img }}" alt="{{ config.defaultImgAlt }}">
+                            </picture>
+                        </div>
+                    </div>
+                {{/each}}
 
-{{/if}} -->
+            {{/if}}
+        </div>
+        <div class="marquee-section animation-marquee-90">
+            {{# if (config reviews)}}
+
+                {{#each reviews.entries}}
+                    <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                        <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                        <p class="mb-2 fw-medium fs-6">{{ quote }}</p>
+                        <div class="d-flex align-items-center mt-2">
+                            <picture>
+                                <img class="f-w-10 rounded-circle" src="{{ avatar }}" alt="{{ config.defaultImgAlt }}">
+                            </picture>
+                            <span class="d-block text-muted fs-7 ms-3">{{ name }}</span>
+                        </div>
+                        <div class="mt-4 f-w-20">
+                            <picture>
+                                <img class="img-fluid d-table mx-auto" src="{{ img }}" alt="{{ config.defaultImgAlt }}">
+                            </picture>
+                        </div>
+                    </div>
+                {{/each}}
+
+            {{/if}}
+        </div>
+    </div>
+</section>
+
+
+
+
+
