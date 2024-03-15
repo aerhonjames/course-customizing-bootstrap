@@ -8,4 +8,9 @@
 
     /* Avatar */
     --theme-avatar-size: 90px;    
+
+    /*breakpoint*/
+    @each $breakpoint, $value in $grid-breakpoints {
+        --theme-breakpoint-#{$breakpoint}: #{$value};
+    }
 }
