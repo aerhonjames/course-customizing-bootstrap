@@ -1,26 +1,50 @@
-<h4>Who we are</h4>
+<div class="pt-10 bg-light">
+    <div class="container">
+        <div class="col-12 mx-auto col-sm col-md-8 col-lg-6 text-center">
+            <h4 class="fs-1 fw-bold mb-4">Who we are</h4>
 
-<!-- Stats-->
-{{> widgets/stats }}
-<!-- / Stats-->
+            <!-- Stats-->
+            {{> widgets/stats }}
+            
+            <!-- / Stats-->
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Sed lobortis nibh augue</a>,
-    ut blandit <a href="#">lorem hendrerit non</a>. Donec finibus at lacus in efficitur nunc
-    fringilla, dui quis
-    vestibulum varius.</p>
-<a href="#">Find out more</a>
-<picture>
-    <img src="{{webRoot}}/assets/images/team-photo.png"
-        alt="{{ config.defaultImgAlt }}">
-</picture>
-
-
-<!-- SVG shapes-->
-{{> svg/svg-shape-one }}
-{{> svg/svg-shape-two }}
-{{> svg/svg-shape-seven }}
-{{> svg/svg-shape-four }}
-{{> svg/svg-shape-three }}
-{{> svg/svg-shape-five }}
-{{> svg/svg-shape-eight }}
-<!-- / SVG shapes-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">Sed lobortis nibh augue</a>,
+                ut blandit <a href="#">lorem hendrerit non</a>. Donec finibus at lacus in efficitur nunc
+                fringilla, dui quis
+                vestibulum varius.</p>
+            <a href="#" class="btn btn-success mt-4">Find out more</a>
+        </div>
+    </div>
+    <div class="position-relative mt-10">
+        <picture class="d-table mx-auto mt-5 col-12 col-sm-10 position-relative z-index-20">
+            <img class="img-fluid d-table mx-auto" src="{{webRoot}}/assets/images/team-photo.png"
+                alt="{{ config.defaultImgAlt }}">
+        </picture>
+        <!-- SVG shapes-->
+        <div class="position-absolute top-0 end-0 start-0 bottom-0 z-index-0 d-none d-lg-block">
+            <div class="d-block f-w-6 position-absolute top-n13 end-50">
+                {{> svg/svg-shape-one }}
+            </div>
+            <div class="d-block f-w-6 position-absolute bottom-15 end-3 rotate-n45 origin-master">
+                {{> svg/svg-shape-two }}
+            </div>
+            <div class="d-block f-w-4 position-absolute bottom-50 start-3">
+                {{> svg/svg-shape-seven }}
+            </div>
+            <div class="d-block f-w-6 position-absolute top-n3 start-30">
+                {{> svg/svg-shape-four }}
+            </div>
+            <div class="d-block f-w-6 position-absolute top-20 end-5">
+                {{> svg/svg-shape-three }}
+            </div>
+            <div class="d-block f-w-6 position-absolute top-n13 end-25">
+                {{> svg/svg-shape-five }}
+            </div>
+            <div class="d-block f-w-4 position-absolute top-n13 start-20">
+                {{> svg/svg-shape-eight }}
+            </div>
+        </div>
+        
+        <!-- / SVG shapes-->
+    </div>
+</div>
